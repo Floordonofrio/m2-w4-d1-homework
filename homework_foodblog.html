@@ -78,6 +78,9 @@
             text-align: center;
             font-size: 0.85em;
         }
+        .post img{
+
+        }
     </style>
 
     
@@ -112,10 +115,13 @@
         <p>
         Was amazing! My Walmart didn’t have coriander in stock and didn’t have ground cumin. I used serrano instead of jalapeño. It was just like my favorite tortilla soup from BJs. I am sending this recipe to my family. I want everyone to try it!
         </p>-->
+        <div v-html="picture"></div>
         {{obj1.author}} - 
         {{obj1.date}}
         {{obj1.reply}}
         <div v-html="obj1.message"></div>
+        
+
     </div>
 
     <div class="post">
@@ -125,6 +131,7 @@
         <p>
         I just made this soup today and it’s so tasty! didn’t have corn at home but still turned out very good.  It’s a winner!  I made beef chili for my parents; but since my dad has gout he can’t eat beef; this white chicken chili is perfect for him.  Thank you Lisa!
         </p>-->
+        <div v-html="picture"></div>
         {{obj2.author}} -
         {{obj2.date}}
         {{obj2.reply}}
@@ -138,6 +145,9 @@
         <p>
         I LOVE this White Chicken Chili! You are right, it is satiating meal—delicious with toasted bread. Refreshingly different taste than any chicken chili I’ve made in the past. I made it exactly as written and added some chopped zucchini, carrots, and celery. Instead of shredding the chicken, I chopped it into small pieces. It freezes very well. Will be an all-time favorite, for sure.
         </p>-->
+        <div v-html="picture">
+            <button v-on:click="pictures"></button>
+        </div>
         {{obj3.author}} -
         {{obj3.date}}
         {{obj3.reply}}
@@ -151,6 +161,7 @@
         <p>
         This recipe is dynamite! My partner usually won’t eat beans but he finished the whole pot (darn was hoping to have some for leftovers haha). This is crowd-pleaser that I am going to add to my regular recipe rotation. Thanks so much, Lisa!
         </p>-->
+        <div v-html="picture"></div>
         {{obj4.author}} -
         {{obj4.date}}
         {{obj4.reply}}
@@ -185,24 +196,34 @@
         el : '#blogposts',
         data:{
             obj1:{
+                picture: '<img src="images/profile.png" alt="image">',
                 author: 'Brianna',
                 data: 'February 18, 2021 @ 3:30 pm',
                 reply: 'REPLY',
                 message: '<p> Was amazing! My Walmart didn’t have coriander in stock and didn’t have ground cumin. I used serrano instead of jalapeño. It was just like my favorite tortilla soup from BJs. I am sending this recipe to my family. I want everyone to try it!</p>'
             },
+            methods:{
+                pictures: function(event){
+                    alert(Brianna Foodie Level: Novice Bio: Food enthusiast. Love to cook and experiment. Into only organic, fat free, sugar free stuffs!)
+                }
+
+            },
             obj2:{
+                picture: '<img src="/images/profile.png" alt="picture">',
                 author: 'LINH',
                 data: 'February 15, 2021 @ 9:46 am',
                 reply: 'REPLY',
                 message: '<p>I just made this soup today and it’s so tasty! didn’t have corn at home but still turned out very good.  It’s a winner!  I made beef chili for my parents; but since my dad has gout he can’t eat beef; this white chicken chili is perfect for him.  Thank you Lisa!</p>'
             },
             obj3:{
+                picture: '<img src="/images/profile.png" alt="picture">',
                 author: 'CATHERINE LEONARDO',
                 data: 'February 13, 2021 @ 12:58 pm',
                 reply: 'REPLY',
                 message: '<p>I LOVE this White Chicken Chili! You are right, it is satiating meal—delicious with toasted bread. Refreshingly different taste than any chicken chili I’ve made in the past. I made it exactly as written and added some chopped zucchini, carrots, and celery. Instead of shredding the chicken, I chopped it into small pieces. It freezes very well. Will be an all-time favorite, for sure.</p>'
             },
             obj4:{
+                picture: '<img src="/images/profile.png" alt="picture">',
                 author: 'KALI',
                 data: 'February 13, 2021 @ 11:31 am',
                 reply: 'REPLY',
